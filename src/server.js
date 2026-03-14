@@ -18,11 +18,13 @@ const cvRoutes = require('./routes/cv');
 const competencyRoutes = require('./routes/competency');
 const interviewRoutes = require('./routes/interview');
 const verificationRoutes = require('./routes/verification');
+const profileRoutes = require('./routes/profiles');
 
 app.use('/api/cv', cvRoutes);
 app.use('/api/competency-test', competencyRoutes);
 app.use('/api/interview', interviewRoutes);
 app.use('/api/verification', verificationRoutes);
+app.use('/api/profiles', profileRoutes);
 
 app.get('/health', (req, res) => {
   res.json({ 
